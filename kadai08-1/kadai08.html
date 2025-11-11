@@ -23,14 +23,9 @@
             ];
             function showa(){
                 let imgs = document.getElementById('gallery');
-                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[0]+"'alt='写真1'>")
-                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[1]+"'alt='写真2'>")
-                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[2]+"'alt='写真3'>")
-                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[3]+"'alt='写真4'>")
-                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[4]+"'alt='写真5'>")
-                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[5]+"'alt='写真6'>")
-                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[6]+"'alt='写真7'>")
-                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[7]+"'alt='写真8'>")
+                for (let i = 0; i < list.length; i++) {
+                    imgs.insertAdjacentHTML('beforeend', "<img src='" + list[i] + "' alt='写真" + (i+1) + "'>");
+                }
                 document.getElementById('show').remove();
             }
     </script>
