@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>要素の追加と削除</title>
+</head>
+<body>
+    <h1>写真の一覧</h1>
+    <p>以下のボタンをクリックすると、写真が一覧表示されます。</p>
+    <button id="show" onclick="showa()">写真を表示</button>
+    <div id="gallery">
+    </div>
+    <script>
+            var list = [
+                "photo_1.jpg",
+                "photo_2.jpg",
+                "photo_3.jpg",
+                "photo_4.jpg",
+                "photo_5.jpg",
+                "photo_6.jpg",
+                "photo_7.jpg",
+                "photo_8.jpg"
+            ];
+            function showa(){
+                let imgs = document.getElementById('gallery');
+                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[0]+"'alt='写真1'>")
+                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[1]+"'alt='写真2'>")
+                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[2]+"'alt='写真3'>")
+                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[3]+"'alt='写真4'>")
+                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[4]+"'alt='写真5'>")
+                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[5]+"'alt='写真6'>")
+                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[6]+"'alt='写真7'>")
+                imgs.insertAdjacentHTML('beforeend',"<img src='"+ list[7]+"'alt='写真8'>")
+                document.getElementById('show').remove();
+            }
+    </script>
+</body>
+</html>
